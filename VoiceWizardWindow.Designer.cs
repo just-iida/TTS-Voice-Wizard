@@ -51,6 +51,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxErase = new System.Windows.Forms.TextBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -368,6 +371,9 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.CadetBlue;
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.textBoxErase);
+            this.tabPage2.Controls.Add(this.checkBox6);
             this.tabPage2.Controls.Add(this.checkBox5);
             this.tabPage2.Controls.Add(this.checkBox1);
             this.tabPage2.Controls.Add(this.label18);
@@ -389,6 +395,36 @@
             this.tabPage2.Size = new System.Drawing.Size(912, 506);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Settings";
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(158, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Change";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.buttonErase_Click);
+            // 
+            // textBoxErase
+            // 
+            this.textBoxErase.Location = new System.Drawing.Point(27, 417);
+            this.textBoxErase.Name = "textBoxErase";
+            this.textBoxErase.Size = new System.Drawing.Size(125, 27);
+            this.textBoxErase.TabIndex = 42;
+            this.textBoxErase.Text = "5000";
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.checkBox6.Location = new System.Drawing.Point(27, 387);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(209, 24);
+            this.checkBox6.TabIndex = 41;
+            this.checkBox6.Text = "Erase Text After Delay (ms)";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
@@ -687,5 +723,8 @@
         private Label label18;
         public Button speechTTSButton;
         private CheckBox checkBox5;
+        public CheckBox checkBox6;
+        private Button button1;
+        private TextBox textBoxErase;
     }
 }

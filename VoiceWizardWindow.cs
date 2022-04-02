@@ -18,6 +18,7 @@ namespace OSCVRCWiz
         string dictationString = "";
         public string activationWord = Settings1.Default.activationWord;
         public int debugDelayValue = 250;// Recommended delay of 250ms 
+        public int eraseDelay = 5000;
         int audioOutputIndex = -1;
         public bool profanityFilter = true;
         //  SpeechRecognitionEngine recognizer;
@@ -474,6 +475,23 @@ namespace OSCVRCWiz
                 profanityFilter = false;
 
             }
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonErase_Click(object sender, EventArgs e)
+        {
+           
+                this.Invoke((MethodInvoker)delegate ()
+                {
+                    eraseDelay = Int32.Parse(textBoxErase.Text.ToString());
+
+
+                });
 
         }
     }
